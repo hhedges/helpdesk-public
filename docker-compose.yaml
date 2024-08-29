@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: helpdesk_c
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true      
+    volumes:
+      - .:/app
